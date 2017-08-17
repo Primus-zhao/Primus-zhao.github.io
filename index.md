@@ -1,37 +1,4 @@
-## Welcome to GitHub Pages
+###Pixel Recursive Super Resolution 分析
 
-You can use the [editor on GitHub](https://github.com/Primus-zhao/Primus-zhao.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+由低分辨率图片转化为高分辨率图片在技术上是比较有难度的一件事情，其主要原因在与这个问题本质上是将数据从低维度映射到高维度的一种行为。如果从数学角度来看这个问题，从低维度到高维度的映射在不引入噪声的情况下是不能实现的，转化出的高维度一定会在某种角度呈现出相关性。所以为了能够得到足够贴近现实的图片，最好选择生成图片的群组具有某种特定规律的情况。换言之，生成的转化模型应该不会具有很好的泛化性能。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-Hello world!!!
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Primus-zhao/Primus-zhao.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
