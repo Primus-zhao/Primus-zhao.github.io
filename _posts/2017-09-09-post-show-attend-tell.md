@@ -26,4 +26,4 @@ $$\alpha_{ti} = \frac{exp(e_{ti})}{\sum{k=1}^L{exp(e_{tk})}}$$
 
 这样我们就得到了一组attention值\\(\alpha_{ti}\\), 之后我们通过如下的公式来得到新的输入向量：
 
-$$\hat{z_t}=\phi(\left{a_i\right}, \left{\alpha_i\right})$$
+$$\hat{z_t}=\phi(\{a_i\}, \{\alpha_i\})$$
