@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Pixel Recursive Super Resolution 分析
 
 Transfer data from low resolution to high resolution is a difficult technical problem. The reason is that low resolution figure usually means low dimension data, vice versa. To transfer data from low dim to high dim, we always need to introduce some noise (like Gaussian) to disentangle the potential corelation between these data.
@@ -14,4 +13,4 @@ attention model从粗浅的意义上来将实际上就是从输入信息到选�
 ## 具体分析
 话不多说，直接上公式
 对于每个CNN channel输出的
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?ax^{2}&space;&plus;&space;by^{2}&space;&plus;&space;c&space;=&space;0" title="ax^{2} + by^{2} + c = 0" /></a>
