@@ -1,21 +1,3 @@
-　　layout: default
-　　title: 我的Blog
-　　---
-
-　　<h2>{{ page.title }}</h2>
-
-　　<p>最新文章</p>
-
-　　<ul>
-
-　　　　{% for post in site.posts %}
-
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-　　　　{% endfor %}
-
-　　</ul>
-
 # Pixel Recursive Super Resolution 分析
 
 Transfer data from low resolution to high resolution is a difficult technical problem. The reason is that low resolution figure usually means low dimension data, vice versa. To transfer data from low dim to high dim, we always need to introduce some noise (like Gaussian) to disentangle the potential corelation between these data.
