@@ -28,8 +28,9 @@ github_username:
 logo: # path of site logo, e.g. "/assets/images/logo.png"
 
 # Build settings
-#markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
+mathjax: true
+#markdown: redcarpet
 theme: jekyll-theme-basically-basic
 plugins:
   - jekyll-feed
