@@ -22,6 +22,8 @@ $$e_ti=f_{att}(a_i, h_{t-1})$$
 
 然后采用softmax方法：
 
-$$\alpha_{ti} = \frac{exp(e_{ti})}{\sum}_{k=1}^L{exp(e_{tk})}$$
+$$\alpha_{ti} = \frac{exp(e_{ti})}{\sum{k=1}^L{exp(e_{tk})}}$$
 
-这样我们就得到了一组attention值\\(\alpha_{ti}\\)
+这样我们就得到了一组attention值\\(\alpha_{ti}\\), 之后我们通过如下的公式来得到新的输入向量：
+
+$$\hat{z_t}=\phi(\left{a_i\right}, \left{\alpha_i\right})
