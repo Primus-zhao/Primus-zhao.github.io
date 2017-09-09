@@ -6,9 +6,6 @@ categories:
 last_modified_at: 2017-09-09T13:34:25-05:00
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
 最近在学习show and tell模型，这个模型主要有两个版本，这两我们首先分析Bengio团队提出的有attention model的版本。这个版本是2015年的论文中提出，在分析之后我们也会对image caption当前比较流行的模型进行介绍和分析。
 
 ### why attention? 
