@@ -17,4 +17,3 @@ attention model从粗浅的意义上来将实际上就是从输入信息到选�
 ### how to attend?
 话不多说，直接上公式
 对于每个CNN channel输出的
-$$a^2 + b^2 = c^2$$
