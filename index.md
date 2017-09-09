@@ -14,4 +14,4 @@ attention model从粗浅的意义上来将实际上就是从输入信息到选�
 ## 具体分析
 话不多说，直接上公式
 对于每个CNN channel输出的
-$$a_i$$
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
