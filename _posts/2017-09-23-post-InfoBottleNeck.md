@@ -13,6 +13,6 @@ last_modified_at: 2017-09-16T22:00:25-05:00
 为了理解Information BottleNeck，一些基本的信息论知识必不可少。下面我们来对信息论中的各种不同的熵的定义进行一个简要的介绍。
 首先，什么是熵？一言不合就得上公式，对于某个随机变量x，其熵的计算方法为：
 
-$$H(x) = -\sigma_{x\inX}p(x)logp(x)$$
+$$H(x) = -\sum_{x\inX}p(x)logp(x)$$
 
 
