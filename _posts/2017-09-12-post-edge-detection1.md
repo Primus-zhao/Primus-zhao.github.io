@@ -1,5 +1,5 @@
 ---
-title: "Post: Edge detection"
+title: "Post: Edge detection(系列I)"
 date: 2017-09-12
 categories:
   - Post
