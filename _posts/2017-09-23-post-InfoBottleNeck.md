@@ -45,5 +45,28 @@ $$I(X;Y) = H(X)-H(X|Y) = H(Y)-Y(Y|X)$$
 
 从概念上来理解，该公式意思是给定了Y知识的条件下X的不确定度的缩减量。
 
+有了以上的准备，就可以开始对文章的主要意义进行分析了。文章分析的过程还引用了两个关于mutual information的结论：
+1.对于X和Y的可逆变换，其互信息不变，暨：
+
+$$I(X;Y)=I(\sigma(X);\phi(Y))$$
+
+2.对于任何三个变量如果存在Markov chain X->Y->Z, 则有：
+
+$$I(X;Y)\ge I(X;Z)$$
+
+暨最后链上较长的互信息较小。
+
+结束了铺垫以后我们来讨论正题，这篇文章在考虑网络架构时非常有趣的将真实的Y值加入了网络架构之前，使得整个架构有一丝Autoencoder的意味。
+
+![network structure](./IB-network-structure.png "别出心裁的网络架构思考模式")
+
+根据这个网络架构及我们之前给出的关于Markov Chain的信息推论，我们可以得到如下的DPI(Data Processing Inequallity)
+
+$$I(X;Y)\ge I(T_1;Y)\ge I(T_2;Y) \ge ... \ge I(T_k;Y)\ge I(\hat{Y};Y)$$
+
+$$H(X)\ge I(X;T_1)\ge I(X;T_2)\ge ...\ge I(X;T_k)\ge I(X;\hat{Y})$$
+
+
+
 
 
