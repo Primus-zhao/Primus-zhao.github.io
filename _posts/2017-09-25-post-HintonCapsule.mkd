@@ -1,4 +1,3 @@
-# Hinton与Capsule计划（第一部分：诞生与崛起）
 ---
 title: "Hinton与Capsule计划（第一部分：神经网络的诞生与崛起）"
 date: 2017-09-25
