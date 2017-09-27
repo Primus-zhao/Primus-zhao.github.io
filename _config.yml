@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: 机器学习：从入门到深井冰
+title: 机器学习：从浅池水到深井冰
 email:
 description:
 baseurl: # the optional subpath of your site, e.g. "/blog"
