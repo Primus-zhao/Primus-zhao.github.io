@@ -6,16 +6,16 @@ categories:
 last_modified_at: 2017-09-25T21:00:25-00:00
 ---
 
-几十年前，美国历史上最为（能）杰（撒）出（谎）的国务卿基辛格接受记者采访时曾被问及这样一个问题：“成绩出色的你为何没有选择留校任教？”基辛格给出了这样的回答：“学术圈的混乱情况使我向往中东地区关系的单纯。”虽有调侃的意味，却也道出了学术界派系争斗的残酷现实。而时下如火如荼的深度学习的发家史几乎可以说是这一情况最深刻的写照。为了能够全面的介绍Hinton及他宏大的Capsule计划，我们就有必要对深度学习（神经网络）的苦难发展史做一个简要的回顾。
+几十年前，美国历史上最为（能）杰（撒）出（谎）的国务卿基辛格接受记者采访时曾被问及这样一个问题：“成绩出色的你为何没有选择留校任教？”基辛格给出了这样的回答：“学术圈的混乱情况使我向往中东地区关系的单纯。”虽有调侃的意味，却也道出了学术界派系争斗的残酷现实。而时下如火如荼的深度学习的发家史几乎可以说是这一情况最深刻的写照。为了能够全面的介绍Hinton及他宏大的Capsule计划，我们就有必要对深度学习（神经网络）的苦难发展史做一个简要的回顾。本文为第一部分，主要介绍早起情况及反向传播。
 
 ## 童年的悲惨世界－－感知器
 
 神经网络的理论根基出现的非常之早。１９４９年Hebb提出了大名鼎鼎的Hebb　rule，随后在１９５７年Frank Rosenblatt基于这一理论设计出了感知器。从现代观点来看，这就是一个单层的最为简单的神经网络，同时其权值更新机制只靠单纯的叠加分类结果来实现。如此简单粗暴的方法自然不可能应对复杂的问题，对于非线性分类问题几乎可以说是无能为力。在故事情节推进之前我们还需要简单的介绍一下故事背景，尽管学术圈中有一众大牛都是做人工智能的，但是这些大牛之间可没有什么阶级情感。因为人工智能领域立山头的情况非常严重，根据其理论基础主要分为四大派系：１、连接主义（来源：神经科学，代表理论：神经网络），２、符号主义（来源：逻辑学，代表理论：专家系统），３、进化主义（来源：遗传生物学，代表理论：遗传算法），４、贝叶斯派（来源：统计学，代表理论：贝叶斯网络）。正如中国的各个门派之间要打个你死我活一样，这些派系之间也是常年的你来我往。而当时人工智能最为推崇的大牛是符号主义的马文明斯基。如果我们以神经网络为第一主角写篇小说，那这位老斯基无疑会成为最大的反面boss。当时的进化主义和贝叶斯派发展的还非常稚嫩，所以自然不会获得明斯基的关注，而偏巧神经网络由于具备模仿人类神经系统的特点，很容易让人把它和正统的人工智能结合起来。看到此情此景老爷子坐不住了，本着趁它虚要它命的精神，老爷子写了一本书，叫做《感知器》。不过不要被书名骗了，马老爷子可不是学雷锋帮忙推广感知器，他写这本书的感觉就好像是乔布斯心血来潮写了本《伟大的微软》或者马化腾搞了本《崛起的３６０》一样：书中强调指出了感知器的在解决XOR等非线性问题的拟合上的局限性，再加上老爷子本身的巨大影响力，使得这一招直中要害，几乎打得神经网络１０年没缓过神来。而Hinton正是在这个寒冰期攻读的神经网络的研究生，所以他曾在吴恩达的采访中追忆起当时的悲惨情景。有图为证：
 
  <img src="https://primus-zhao.github.io/assets/image/hinton1.jpg" width="400" height="400" alt="hinton追忆１"/>
- <img src="./hinton2.jpg" width="400" height="400" alt="hinton追忆２"/>
- <img src="./hinton3.jpg" width="400" height="400" alt="hinton追忆３"/>
- <img src="./hinton4.jpg" width="400" height="400" alt="hinton追忆４"/>
+ <img src="https://primus-zhao.github.io/assets/image/hinton2.jpg" width="400" height="400" alt="hinton追忆２"/>
+ <img src="https://primus-zhao.github.io/assets/image/hinton3.jpg" width="400" height="400" alt="hinton追忆３"/>
+ <img src="https://primus-zhao.github.io/assets/image/hinton4.jpg" width="400" height="400" alt="hinton追忆４"/>
 
 这种感觉就好像是现在的你花了大价钱跑到蓝翔去学习BP机修理专业一样，在正常人眼里都是不可理喻的行为。
 好在当时的美国还有对神经网络理论抱有兴趣的团队，最终接纳了Hinton。而事实也证明天道有轮回，Hinton的这一坚持也带来了回报，其不懈的努力终于换来了带来神经网络第一次复兴的技术－－反向传播算法。
@@ -39,12 +39,12 @@ $$e=c*d$$
 
 那么通过计算图来表示这个计算流程的效果如下：
 <div align="center">
-<img src="./computation-graph.png" width="600" height="300" alt="计算图样例"/>
+<img src="https://primus-zhao.github.io/assets/image/computation-graph.png" width="600" height="300" alt="计算图样例"/>
 </div>
 在计算图中，每个节点（node)代表一个变量及该变量的计算过程（算子），而连接节点的箭头代表了变量的输出方向，即哪些变量的计算需要该变量，比如指向c的a和b两个节点的箭头就代表了为了计算c必须获得a和b两个变量，这与我们刚才写出的\\(c=a+b\\)公式相对应。
 构建好了计算图之后，我们就可以按照箭头流向进行计算了，计算过程中只需要记住一点：当指向一个node的所有node都已经求值后，就可以按照node中的算子对该node的值进行计算。在该计算图中，只需要按照顺序计算a,b->c->d->e即可，其中a,b为已知输入量。这里我们假设a,b分别为２和１，那么根据以上流程完成的计算图如下所示：
 <div align="center">
-<img src="./tree-eval.png" width="600" height="300" alt="计算图样例"/>
+<img src="https://primus-zhao.github.io/assets/image/tree-eval.png" width="600" height="300" alt="计算图样例"/>
 </div>
 
 ### 计算图的导数
@@ -67,7 +67,7 @@ $$\frac{\partial e}{\partial d}=\frac{\partial (c*d)}{\partial d}=c$$
 
 从整个计算图的角度来看，进行求导后的效果如下：
 <div align="center">
-<img src="./tree-eval-derivs.png" width="600" height="300" alt="计算图求导样例"/>
+<img src="https://primus-zhao.github.io/assets/image/tree-eval-derivs.png" width="600" height="300" alt="计算图求导样例"/>
 </div>
 
 那么对于非直接连接的变量间的相互影响该如何估计？很简单，找到两个变量对应node的连接路径，将路径上的偏导乘个遍就可以了。例如在上图中如果我们想要计算\\(\frac{\partial c}{\partial a}\\)的话怎么办，只要沿从a到c的路径把所有偏导值都乘起来就ok。计算过程如下：
@@ -84,7 +84,7 @@ $$\frac{\partial e}{\partial b}=\frac{\partial e}{\partial c}*\frac{\partial c}{
 
 下面我们来考虑一个更加一般化的问题，如果不同节点间存在几个通路，该如何给出一般化的解法？下面我们先来实现一次智商上的巨大飞跃，将通路数量从２条增加至３条～。具体的通路图像如下图所示：
 <div align="center">
-<img src="./chain-def-greek.png" width="600" height="２00" alt="路径因子分析样例"/>
+<img src="https://primus-zhao.github.io/assets/image/chain-def-greek.png" width="600" height="２00" alt="路径因子分析样例"/>
 </div>
 
 那么\\(\frac{\partial Z}{\partial X}\\)的值是多少呢，评着过硬的数数本领，我们可以查出答案应该是：
@@ -98,14 +98,14 @@ $$\frac{\partial Z}{\partial X}=(\alpha + \beta + \gamma) * (\delta + \epsilon +
 
 基于这种方式，答案的项数就能够得到大大的简化，我们也不用再去笨拙地一条条地去数路了，但是后边这种表示方式是通过数学求解获得的，其是否具有计算图的解释呢？答案是有的：
 <div align="center">
-<img src="./chain-forward-greek.png" width="600" height="２00" alt="计算图前向计算"/>
+<img src="https://primus-zhao.github.io/assets/image/chain-forward-greek.png" width="600" height="２00" alt="计算图前向计算"/>
 </div>
 
 如果对每个节点我们都对X求导，就能得到所有节点和X变化之间的相互关系，也就如上图所示，而对这些关系采用连锁乘法就得到了最终解。
 当然，我们还可以开开脑洞，看看所有节点的变化和Z之间的关系，然后就能得到下图：
 
 <div align="center">
-<img src="./chain-backward-greek.png" width="600" height="２00" alt="计算图前向计算"/>
+<img src="https://primus-zhao.github.io/assets/image/chain-backward-greek.png" width="600" height="２00" alt="计算图前向计算"/>
 </div>
 
 殊途同归，最终得到的\\(\frac{\partial Z}{\partial X}\\)是完全相同的，而这种思路，学名就叫做反向传播。
@@ -115,16 +115,16 @@ $$\frac{\partial Z}{\partial X}=(\alpha + \beta + \gamma) * (\delta + \epsilon +
 在这些图之间前向后向的绕了半天以后，我们重新回归主题，最开始给出的图，对应前向和反向应该如何计算？
 首先我们看前向的求解，现在我们求解所有node关于b到导数
 <div align="center">
-<img src="./tree-forwardmode.png" width="600" height="300" alt="计算图求导样例"/>
+<img src="https://primus-zhao.github.io/assets/image/tree-forwardmode.png" width="600" height="300" alt="计算图求导样例"/>
 </div>
 
 还是so easy, 可惜的一次计算是不够的，如果我们还想知道\\(\frac{\partial e}{\partial a}\\)，我们还要从头来过再计算一遍。而反向传播的表现如何呢？
 <div align="center">
-<img src="./tree-backprop.png" width="600" height="300" alt="计算图求导样例"/>
+<img src="https://primus-zhao.github.io/assets/image/tree-backprop.png" width="600" height="300" alt="计算图求导样例"/>
 </div>
 
 我们会发现我们感兴趣的\\(\frac{\partial e}{\partial a}\\)和\\(\frac{\partial e}{\partial b}\\)同时被求出了。惊不惊喜？意不意外？这就是反向传播的魅力，这还仅仅是两个输入，通常情况下我们的输入会有成千上万，这种情况下采取不同的梯度计算顺序就会带来上万倍的效率差别。这也是反向传播的魅力所在。
 
 ### 总结和预告片
 反向传播的算法核心思想并不复杂，然而它却为多层神经网络的训练指明了方向。当然，反向传播实际的理论推倒和表达要晦涩很多（你不能指望Hinton用几个单变量的例子配合几幅漂亮的图片就能带动起神经网络的文艺复兴，毕竟其他流派的大牛们也不是吃素的）。为了尽量不吓跑读者，我尽量删除了这些晦涩的公式，感兴趣的朋友可以自行查阅。
-反向传播的出现带来了多层神经网络的繁荣，但是在发展的过程中，由于其存在固有的缺点，在实际应用中无法得到有效地普及和使用。从而导致其发展出现了新的低谷。当然在这一过程中，免不了要提及Hinton和贝叶斯派代表人物Michael. I. Jordan（请不要与打球的那个混淆）之间的爱恨情仇，以及神经网络与概率图的相爱相杀的故事。在这神经网络低谷时期，Hinton开始尝试从物理系统而非神经系统获得一些启示。下期的理论核心就是Hinton在贝叶斯派大行其道这一阶段所做的一些地下工作－－玻尔兹曼机。
+反向传播的出现带来了多层神经网络的繁荣，但是在发展的过程中，由于其存在固有的缺点，在实际应用中无法得到有效地普及和使用。从而导致其发展出现了新的低谷。当然在这一过程中，免不了要提及Hinton和贝叶斯派代表人物Michael. I. Jordan（请不要与打球的那个混淆）之间的爱恨情仇，以及神经网络与概率图的相爱相杀的故事。在这神经网络低谷时期，Hinton开始尝试从物理系统而非神经系统获得一些启示。下期的理论核心就是Hinton在贝叶斯派大行其道这一阶段所做的一些地下工作－－玻尔兹曼机。下期再会！
