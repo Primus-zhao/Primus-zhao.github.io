@@ -1,4 +1,10 @@
-#Path Aggregation Network for Instance Segmentation
+---
+title: "Infomation BottleNeck: 连Hinton都喜欢的文章"
+date: 2017-09-16
+categories:
+  - Post
+last_modified_at: 2017-09-16T22:00:25-05:00
+---
 
 这篇文章是目前进行图像实例分割的state of art，由于近期在刷kaggle上的WAD比赛，需要完成实例分割的任务，所以小刷了几篇论文，这是***第一篇***概述。
 文章的开始自己也阐明了，其实本文提出的网络（PANet）在架构上并没有很大的创新，更多的是对去年扛把子何恺明组提出的Mask RCNN架构上进行的一些修改，不过考虑到毕竟是在原有网络的基础上有提升，而且文章也非常厚道地将很多对架构的思考加了进去，还是值得稍作分析的。
