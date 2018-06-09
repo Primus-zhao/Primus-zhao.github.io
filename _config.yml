@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: 机器学习：从浅池水到深井冰
-email:
-description:
+title: 机器学习：ninety steps for the one step
+email: python4699680@gmail.com
+description: 
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
